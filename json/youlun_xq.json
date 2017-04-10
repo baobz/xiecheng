@@ -1,0 +1,20 @@
+{
+	"ship_id": "1",
+	"ship_title": "天海游轮1",
+	"ship_name": "新世纪号",
+	"ship_addr": "下关+福冈",
+	"ship_date":"2017-4-1",
+	"ship_start": "上海出发",
+	"ship_price": "1234",
+	"imgs": [
+		{"url": "images/xq-ship.jpg"},
+		{"url": "images/xq-lunbo.jpg"}
+	],
+	"rooms": [
+		{"room_name": "内舱房(无窗)","desc": "共6种房型", "price": "2199"},
+		{"room_name": "海景房(有窗)","desc": "共6种房型", "price": "2499"},
+		{"room_name": "海景阳台房(有阳台)","desc": "共6种房型", "price": "3199"},
+		{"room_name": "套房(有阳台)","desc": "共6种房型", "price": "3899"}
+	]
+	
+}

@@ -1,0 +1,19 @@
+<div class="panel" ng-if="panelBol">
+	<dl class="clearfix">
+		<dt class="pull-left">
+			<img src="images/room.jpg"/>
+		</dt>
+		<dd class="container-room">
+			<p>标准内舱四人房 11/12<span class="pull-right">查看详情</span></p>
+			<p>需住4人 4-5层 16m²</p>
+		</dd>
+	</dl>
+	<div class="clearfix">
+		<div class="pull-left">￥2199起/人</div>
+		<div class="pull-right btn-group">
+			<span class="decrease crease" ng-click="decrease()" ng-if="book > 0">-</span>
+			<span ng-if="book > 0">{{book}}间</span>
+			<span class="increase crease" ng-click="increase()">+</span>
+		</div>
+	</div>
+</div>

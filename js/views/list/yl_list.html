@@ -1,0 +1,67 @@
+<!--自定义搜索框-->
+<div search></div>
+
+<!--轮播自定义指令-->
+<div lun-bo countries="countries"></div>
+
+<div class="ad clearfix">
+	<div class="left pull-left">
+		<p class="sky-sea">天海春季爆款</p>
+		<p>冰点价1799起</p>
+		<img src="images/ice.png"/>
+	</div>
+	<dl class="right pull-left">
+		<dt class="spring">
+			<div class="title">
+				<p class="sub-title">春季旅游节</p>
+				<p>豪礼大放送</p>
+			</div>
+			
+			<img src="images/spring.jpg"/>
+		</dt>
+		<dd class="book pull-left">
+			<p class="sub-title">17年游轮预售</p>
+			<img src="images/book.png"/>
+		</dd>
+		<dd class="baike pull-left">
+			<p class="sub-title">游轮百科</p>
+			<img src="images/baike.png"/>
+		</dd>
+	</dl>
+</div>
+
+<div class="list">
+	<!--tab 切换start-->
+	<ul class="container">
+		<li ng-repeat="tab in vm.tabs.btns"><a href="javasxript:;" 
+				ng-class="{active: vm.tabs.index == $index}" 
+				ng-click="tabChange($index)">{{tab.label}}</a>
+		</li>
+	</ul>
+	<!--tab 切换end-->
+	<div class="list-content">
+		<a href="#/xq">
+			<dl class="clearfix" ng-repeat="ship in ships|type:vm.tabs.index">
+				<dt class="pull-left img">
+					<img src="images/ship.jpg"/>
+					<p class="expense">船上消费</p>
+				</dt>
+				<dd class="pull-left desc">
+					<p>{{ship.ship_title}}</p>
+					<p class="title">{{ship.ship_name}}【{{ship.ship_addr}}】6天5晚</p>
+					<p>{{ship.ship_date}} {{ship.ship_start}}</p>
+					<p>{{ship.ship_desc}}</p>
+					<p><span><small>￥</small>{{ship.ship_new_price}}</span> 起/人 <del>￥{{ship.ship_old_price}}</del> <small class="decrease">8.3折</small></p>
+				</dd>
+			</dl>
+		</a>
+		<div class="more" ng-click="getMore()">查看更多超值推荐产品{{vm.page.index}}</div>
+	</div>
+
+</div>
+
+<div class="ship-row">
+		<div class="title">热门游轮</div>
+		<!--列表轮播-->
+		<div lunbo-list ></div>
+</div>

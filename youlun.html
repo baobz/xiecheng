@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="shipApp">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title>{{headTitle}}</title>
+		
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/swiper.css" />
+		<link rel="stylesheet" href="css/youlun.less" />
+		<link rel="stylesheet" href="css/xq.less" />
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_wq3zllgcfcx47vi.css" />
+		
+		<script src="rem-init.js"></script> 
+		<script src="lib/jquery.js"></script>
+		<script src="lib/swiper.js"></script>
+		<script src="lib/underscore.js"></script>
+		<script src="lib/angular.js"></script>
+		<script src="lib/angular-route.js"></script>
+		<script src="js/services/getDataFactory.js"></script>
+		<script src="js/services/getXqData.js"></script>
+		
+		<script src="js/app/app.js"></script>
+		<script src="js/routes/route.js"></script>
+		<script src="js/directives/backButton.js"></script>
+		<script src="js/directives/lunbo.js"></script>
+		<script src="js/directives/lunbo-list.js"></script>
+		<script src="js/directives/search.js"></script>
+		<script src="js/directives/xq-lunbo.js"></script>
+		<script src="js/directives/modelTemp.js"></script>
+		<script src="js/directives/panel.js"></script>
+		
+		<script src="js/controllers/ship_ctrl.js"></script>
+		<script src="js/controllers/xq.js"></script>
+		
+		
+		<script src="js/filter/type.js"></script>
+		<script src="js/filter/paging.js"></script>
+		
+		
+	</head>
+	<body>
+		<!--头部start-->
+		<div class="header">
+			<a back-button href="#" class="pull-left" ng-click="back()"><i class="iconfont icon-back"></i></a>
+			<div>{{title}}</div>
+			<a href="#" class="pull-right"><fav-btn></fav-btn><b></b>&nbsp;&nbsp;<b></b>&nbsp;&nbsp;<b></b></a>
+		</div>
+		<!--头部end-->
+		
+		<div ng-view></div>
+		
+	</body>
+</html>

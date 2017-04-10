@@ -1,0 +1,127 @@
+
+<div xq-lunbo imgs="imgs"></div>
+
+<div class="main">
+	<div class="desc">
+		<h4>{{data.ship_title}} 【{{data.ship_name}}】 5天4晚佐世保市</h4>
+		<p><span class="price"><small>￥</small>{{data.ship_price}}<small class="per-people"> 起/人 </small></span><small class="festival">端午</small></p>
+		<!--在这里点击有一个模态框弹出-->
+		<p class="server" ng-click="showModel()"><span>游轮餐饮预售</span><span>大巴服务</span><i class="pull-right iconfont icon-more"></i></p>
+	</div>
+	
+	<div class="date">
+		<p>5-30 周二 | 上海上船<span class="pull-right">共3个班期<i class="iconfont icon-more"></i></span></p>
+		<p>携程国际</p>
+	</div>
+	
+	<div class="comment">
+		<p>新产品,暂无点评</p>
+		<p>查看【新世纪号】其他产品的评价</p>
+	</div>
+	
+	<div class="special">
+		<h5>产品特色</h5>
+		<p>
+			受“全球Berlitz邮轮指南”好评的舌尖上的邮轮，
+			国际名厨悉心打造烹饪出适合中国人的美味，
+			带您尊享精致礼遇服务与舌尖上的中西盛筵，
+			海上冰吧、超大海上免税店、特色海上火锅，让您终身难忘！
+			选择天海邮轮，与快乐同行！
+		</p>
+	</div>
+	
+	<div class="message">
+		<ul>
+			<li>
+				<div class="clearfix container">
+					<span class="pull-left">舱房信息</span>
+					<span class="pull-right">费用与价格说明</span>
+				</div>
+				
+			</li>
+			<li ng-repeat="room in rooms">
+				<div class="clearfix container" ng-click="panelShow($index)">
+					<div class="pull-left">
+						<p class="room">{{room.room_name}}</p>
+						<p class="detail">{{room.desc}}</p>
+					</div>
+					<div class="pull-right">
+						<span class="price"><small>￥</small>{{room.price}}</span><small>起/人 </small>
+						<i class="iconfont icon-down my-font"></i>
+					</div>
+				</div>
+				
+				<!--点击展开与隐藏自定义指令-->
+				<div panel book="book"></div>
+				
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	
+	<div class="main-title">
+		<div class="line"></div>
+		<div class="center-title">可选交通服务</div>
+	</div>
+	
+	<div class="address">
+		<div class="addr-detail">
+			<div class="bus">
+				<div class="title">上海虹桥火车站至上海吴淞口码头往返大巴</div>
+				<div class="small">
+					<p class="pull-left">集合时间: </p>
+					<p class="together">虹桥火车站-码头，上午11：30发车；码头-虹桥火车站，上午10：00发车</p>
+				</div>
+				<div class="small">
+					<p class="pull-left">集合地点: </p>
+					<p class="together">虹桥火车站-码头，上海虹桥火车站P9大巴停车场（1F）；码头-虹桥火车站，上海吴淞口国际邮轮码头2号门外</p>
+				</div>
+			</div>
+			
+			<div class="traffic">
+				<p class="price"><span>￥65</span>/人</p>
+				<p class="detail">查看详情</p>
+			</div>
+		</div>
+		<div class="all">
+			查看全部交通服务
+		</div>
+	</div>
+	
+	<div class="journey">
+		<div class="journey-detail">
+			<h5>行程介绍</h5>
+			<p class="journey-desc">
+				以下行程日期和时间均为当地时间，可能会因为天气、路况等原因做相应调整，请以最终的行程安排为准。
+			</p>
+			<div></div>
+		</div>
+		<div class="journey-more">
+			查看详细行程说明
+		</div>
+	</div>
+	
+	<div class="main-title">
+		<div class="line"></div>
+		<div class="center-title">签证说明</div>
+	</div>
+	
+	<div class="recommend clearfix">
+		<div class="pull-left">携程优势</div>
+		<div class="pull-right">产品推荐</div>
+	</div>
+</div>
+
+<div model-directive showBol="{{showBol}}" showModel="showModel()"></div>
+
+<div class="space"></div>
+
+<div class="footer">
+	<div class="cart pull-left"><i class="iconfont icon-cart"></i> <span class="count">{{book}}</span> 间
+		<span class="cabin" ng-if="book < 1">请先选择舱房</span>
+		<span class="cabin" ng-if="book >= 1">最多可定5间</span>
+	</div>
+	<div class="btn pull-right">开始预订</div>
+</div>

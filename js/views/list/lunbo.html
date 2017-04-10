@@ -1,0 +1,28 @@
+<div class="country">
+	<div class="swiper-container swiper-container-1">
+	  <div class="swiper-wrapper">
+	    <div class="swiper-slide">
+	    	<ul class="clearfix hot-country">
+					<li ng-repeat="country in countries.countries1">
+						<a href="#">
+							<img ng-src="{{country.img}}"/>
+							{{country.name}}
+						</a>
+					</li>
+				</ul>
+	    </div>
+	    <div class="swiper-slide">
+	    	<ul class="clearfix hot-country">
+					<li ng-repeat="country in countries.countries2">
+						<a href="#">
+							<img ng-src="{{country.img}}"/>
+							{{country.name}}
+						</a>
+					</li>
+				</ul>
+	    </div>
+	  </div>
+	
+	  <div class="swiper-pagination swiper-pagination-1"></div>
+	</div>
+</div>
